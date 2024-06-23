@@ -1,2 +1,11 @@
-- name: Python Coverage Comment
-  uses: py-cov-action/python-coverage-comment-action@v3.24
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "main"
+jobs:
+  coverage:
+    name: Python Coverage Comment
+    uses: py-cov-action/python-coverage-comment-action@v3.24
